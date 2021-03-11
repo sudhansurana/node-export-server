@@ -87,8 +87,8 @@ function loop() {
         imports
     ;
 
-    page.settings.localToRemoteUrlAccessEnabled = true;
-   // page.settings.XSSAuditingEnabled = true;
+    page.settings.localToRemoteUrlAccessEnabled = false;
+    page.settings.XSSAuditingEnabled = true;
     page.settings.resourceTimeout = 5000;
 
     //User agent to force gfonts to serve woff and not woff2
