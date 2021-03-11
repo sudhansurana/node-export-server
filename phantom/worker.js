@@ -614,6 +614,11 @@ function loop() {
         }
 
     } else {
+
+        // Short circuit the eval options, i.e. only allow svg exporting
+        page.content = '{"error": "Configuration exporting currently not available"}';
+        return;
+
         //Inject the CSS into the template
         if (data.styledMode) {
             cachedCopy = cachedContentStyled.replace('{{css}}', css);
