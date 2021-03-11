@@ -603,6 +603,8 @@ function loop() {
     }
 
     if (data.svgstr && !data.chart) {
+        page.navigationLocked = true;
+        page.settings.javascriptEnabled = false;
 
         if (data.svgstr.indexOf('<?xml') >= 0) {
             //There's already an xml start tag..
