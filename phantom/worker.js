@@ -614,8 +614,9 @@ function loop() {
         }
 
     } else {
-
         // Short circuit the eval options, i.e. only allow svg exporting
+        page.navigationLocked = true;
+        page.settings.javascriptEnabled = false;
         page.content = '{"error": "Configuration exporting currently not available"}';
         return;
 
