@@ -135,7 +135,7 @@ let schema = {
         agree: {
             description: 'Agree to the license terms? y/n',
             required: true,
-            default: 'no',
+            default: 'y',
             message: 'Please enter (y)es or (n)o',
             conform: boolConform
         },
